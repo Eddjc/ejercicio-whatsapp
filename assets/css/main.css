@@ -1,12 +1,38 @@
+#user-list{
+    background-color: #3D505E;
+    padding: 10px;
+    margin: 1px;
+    display: none;
+}
+
+#chats-list{
+    background-color: red;
+}
+
+#contacts-list{
+    display: none;
+    background-color: green;
+}
+
+.small{
+    color:#A8B1B8;
+}
+
 .menu-option{
-    color: #A8B1B8;    
+    color: #A8B1B8;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin: 0px 10px;    
 }
 .menu-option.active{
     color: #198375;
+    border-bottom: 4px solid #198375;
 }
 
 .body{
     background-color: #101D25;
+    color:#A8B1B8
 }
 
 .user-select{
@@ -14,8 +40,9 @@
     padding: 5px;
 }
 
-.user-select-img{
-    width: 50px;
+.user-select-img, #user-list img{
+    width: 40px;
+    height: 40px;
 }
 
 .bg-dark{
