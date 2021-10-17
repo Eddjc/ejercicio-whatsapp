@@ -46,7 +46,14 @@
 
 .body{
     background-color: #101D25;
-    color:#A8B1B8
+    color:#A8B1B8;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main{
+    flex: 1;
 }
 
 .user-select{
@@ -65,4 +72,63 @@
 
 .navbar-dark .navbar-brand{
     color: #A8B1B8 !important;
+}
+
+.message {
+    background-color: black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.message.send{
+    background-color: #105248;
+    margin-left: auto;
+}
+
+.message.received{
+    background-color: #3C3C3E;
+}
+
+.icon{
+    padding: 10px;
+}
+
+.icon i {
+    font-size: 1.4rem;
+}
+
+.stikers {
+    background-color: #3D505E;
+    height: 30vh;
+    display: none;
+}
+.stiker-container{
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #b6b9bb;
+}
+
+#chat-datail{
+    background-image: url(../bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#message-form{
+    background-color: #1D2A32;
+    padding: 10px;
+    display: flex;
+}
+
+#message-form input{
+    flex: 1;
+    border-radius: 20px;
+    border: 0px;
 }

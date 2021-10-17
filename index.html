@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.css">
     <title>Whatsapp</title>
+    <script src="https://kit.fontawesome.com/2408be5b8b.js" crossorigin="anonymous"></script>
 </head>
 <body class="body">
     
@@ -18,7 +19,7 @@
             </div>
         </div>
         <!-- LISTA USUARIOS -->
-        <dir class="container-fluid">
+        <div class="container-fluid">
             
             <div id="user-list" class="row rounded-3">
                 <div class="small">
@@ -47,9 +48,9 @@
                 </div>
 
             </div>
-        </dir>
+        </div>
         <div>
-            <span class="menu-option active" onclick="selectOption('chats-list',th)">
+            <span class="menu-option active" onclick="selectOption('chats-list',this)">
                 Chat
             </span>
             <span class="menu-option" onclick="selectOption('contacts-list',this)">
@@ -57,9 +58,10 @@
             </span>
         </div>
     </nav>
-    <main>
+    <main class="main" >
+        <!-- lista de chats -->
         <div id="chats-list">
-            <div class="chat-card my-2 mx-2">
+            <div class="chat-card my-2 mx-2" onclick="showChatDetail()">
                 <div class="p-2">
                     <img src="assets/profile-pics/majinboo.jpg" class="rounded-circle img-chat" alt="">
                 </div>
@@ -76,9 +78,57 @@
             </div>
              
         </div>
+        <!-- Contactos -->
         <div id="contacts-list">
             Lista de contactos
         </div>
+        <!-- Detalle Chat -->
+        <div id="chat-datail">
+            <div>
+                <div class="message send">
+                    mensaje 1
+                    <div class="small text-end">9:00 pm</div>
+                </div>
+                <div class="message received">
+                    mensaje 2
+                    <div class="small text-end">9:00 pm</div>
+                </div>
+                <div class="message send">
+                    mensaje 3
+                    <div class="small text-end">9:00 pm</div>
+                </div>
+            </div>
+            <div class=" stikers" id="stickers">
+                <div class="container-fuid">
+                    <div class="row">
+                        <div class="col-4">
+                           <div class="stiker-container"> 
+                               <img src="assets/stickers/1.png" class="img-fluid">
+                           </div>
+                        </div>
+                        <div class="col-4">
+                           <div class="stiker-container"> 
+                               <img src="assets/stickers/2.png" class="img-fluid">
+                           </div>
+                        </div>
+                        <div class="col-4">
+                           <div class="stiker-container"> 
+                               <img src="assets/stickers/3.png" class="img-fluid">
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="message-form">
+                <span class="icon" onclick="toggleStickers()">
+                    <i class="far fa-sticky-note"></i>
+                </span>
+                <input type="text" id="message-input">
+                <span class="icon"><i class="fas fa-paper-plane"></i></span>
+            </div>
+
+        </div>
+
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
