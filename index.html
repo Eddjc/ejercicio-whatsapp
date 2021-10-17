@@ -49,7 +49,7 @@
             </div>
         </dir>
         <div>
-            <span class="menu-option active" onclick="selectOption('chats-list',this)">
+            <span class="menu-option active" onclick="selectOption('chats-list',th)">
                 Chat
             </span>
             <span class="menu-option" onclick="selectOption('contacts-list',this)">
@@ -59,7 +59,22 @@
     </nav>
     <main>
         <div id="chats-list">
-            Lista de chats 
+            <div class="chat-card my-2 mx-2">
+                <div class="p-2">
+                    <img src="assets/profile-pics/majinboo.jpg" class="rounded-circle img-chat" alt="">
+                </div>
+                <!-- TEXTOS -->
+                <div class="text p-2">
+                    <div class="d-flex justify-content-between">
+                        <div><b>Vegeta</b></div>
+                        <div>9:00 pm</div>
+                    </div>
+                    <div class="small">
+                        vegeta: Kakaroto!!!
+                    </div>
+                </div>
+            </div>
+             
         </div>
         <div id="contacts-list">
             Lista de contactos
